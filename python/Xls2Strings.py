@@ -72,7 +72,7 @@ def convertFromMultipleForm(options, fileDir, targetDir):
                 iosFileManager = open(iosDestFilePath, "wb")
                 for row in sheet.get_rows():
                     content = "\"" + row[0].value + "\" " + \
-                        "= " + "\"" + row[1].value + "\";\n"
+                      ": " + "\"" + row[1].value.replace("\n", "; ") + "\";\n"
                     iosFileManager.write(content)
                 if options.additional is not None:
                     iosFileManager.write(options.additional)

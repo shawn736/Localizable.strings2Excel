@@ -70,13 +70,13 @@ def convertFromMultipleForm(options, fileDir, targetDir):
             for sheet in xlsFileUtil.getAllTables():
                 iosDestFilePath = langFolderPath + "/" + sheet.name
                 iosFileManager = open(iosDestFilePath, "wb")
-                iosFileManager.write("{\n")
+                iosFileManager.write("[\n")
                 for row in sheet.get_rows():
-                    content = "\"" + row[0].value + "\" " + \
-                      ": " + "\"" + row[1].value.replace("\n", "; ") + "\",\n"
+                    content = "{\"" + row[0].value + "\" " + \
+                      ": " + "\"" + row[1].value.replace("\n", "; ") + "\"},\n"
 #                    content = row[0].value + "@" + row[1].value.replace("\n", "; ") + "\n"
                     iosFileManager.write(content)
-                iosFileManager.write("\n}")
+                iosFileManager.write("\n]")
                 if options.additional is not None:
                     iosFileManager.write(options.additional)
                 iosFileManager.close()

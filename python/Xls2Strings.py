@@ -72,8 +72,9 @@ def convertFromMultipleForm(options, fileDir, targetDir):
                 iosFileManager = open(iosDestFilePath, "wb")
                 iosFileManager.write("[\n")
                 for row in sheet.get_rows():
+                  # 换行符替换为空格
                     content = "{\"" + row[0].value + "\" " + \
-                      ": " + "\"" + row[1].value.replace("\n", "; ") + "\"},\n"
+                      ": " + "\"" + row[1].value.replace("\n", " ") + "\"},\n"
 #                    content = row[0].value + "@" + row[1].value.replace("\n", "; ") + "\n"
                     iosFileManager.write(content)
                 iosFileManager.write("\n]")

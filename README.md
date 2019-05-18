@@ -66,7 +66,7 @@ Convert examples/ios/ successfully! you can see xls file in examples/output/stri
 ![](imgs/1.0.0/strings-2-xls.jpg)
 
 ### 2.Convert **excel** files to **iOS** strings files
-
+注意这里给的是xls所在的文件夹位置，不是xls的位置
 ```
 $ python python/Xls2Strings.py -f examples/output/strings-files-to-xls_20190129_165830/ -t examples/ou
 tput/

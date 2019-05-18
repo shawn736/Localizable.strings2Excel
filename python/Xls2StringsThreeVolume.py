@@ -72,7 +72,7 @@ def convertFromMultipleForm(options, fileDir, targetDir):
                 one = total / 3
                 two = one * 2
                 i = 0
-                iosDestFilePath = langFolderPath + "/" + file.replace(".xls", "") + "A01"
+                iosDestFilePath = langFolderPath + "/" + file.replace(".xls", "") + "B01"
                 iosFileManager = open(iosDestFilePath, "wb")
                 iosFileManager.write("[\n")
                 for row in sheet.get_rows():
@@ -90,7 +90,7 @@ def convertFromMultipleForm(options, fileDir, targetDir):
                 iosFileManager.close()
 
                 i = 0
-                iosDestFilePath02 = langFolderPath + "/" + file.replace(".xls", "") + "A02"
+                iosDestFilePath02 = langFolderPath + "/" + file.replace(".xls", "") + "B02"
                 iosFileManager02 = open(iosDestFilePath02, "wb")
                 iosFileManager02.write("[\n")
                 for row in sheet.get_rows():
@@ -111,7 +111,7 @@ def convertFromMultipleForm(options, fileDir, targetDir):
                 iosFileManager02.close()
 
                 i = 0
-                iosDestFilePath03 = langFolderPath + "/" + file.replace(".xls", "") + "A03"
+                iosDestFilePath03 = langFolderPath + "/" + file.replace(".xls", "") + "B03"
                 iosFileManager03 = open(iosDestFilePath03, "wb")
                 iosFileManager03.write("[\n")
                 for row in sheet.get_rows():

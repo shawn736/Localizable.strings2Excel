@@ -68,7 +68,7 @@ def convertFromMultipleForm(options, fileDir, targetDir):
                 os.makedirs(langFolderPath)
 
             for sheet in xlsFileUtil.getAllTables():
-                iosDestFilePath = langFolderPath + "/" + sheet.name
+                iosDestFilePath = langFolderPath + "/" + file.replace(".xls", "")
                 iosFileManager = open(iosDestFilePath, "wb")
                 iosFileManager.write("[\n")
                 for row in sheet.get_rows():
